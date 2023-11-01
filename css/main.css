@@ -667,10 +667,6 @@ nav a:hover {
     background-color: var(--sec-color);
 }
 
-.blog-content {
-    /* background-color: teal; */
-}
-
 .blog-content .cont {
     /* background-color: tomato; */
     width: 33.3%;
