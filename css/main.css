@@ -231,7 +231,6 @@ nav a:hover {
     position: absolute;
     border-radius: 5px;
     top: 100%;
-    /* opacity: 0; */
     visibility: hidden;
     transition: top 0.8s ease 0s;
     height: 100%;
@@ -239,7 +238,6 @@ nav a:hover {
 
 .main-abt .left-img:hover .layer {
     z-index: 2;
-    /* opacity: 1; */
     height: 100%;
     visibility: visible;
     top: 0%;
