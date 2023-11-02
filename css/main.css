@@ -576,6 +576,7 @@ nav a:hover {
 
 .port img {
     width: 100%;
+    border-radius: 5px;
 }
 
 .port .main-imgs {
@@ -597,17 +598,38 @@ nav a:hover {
 .pic::before {
     opacity: 0;
     content: '';
-    width: 91%;
-    height: 91%;
+    width: 92%;
+    height: 92%;
     background-color: #000;
     position: absolute;
     border-radius: 5px;
     transition: all .5s ease 0s;
 }
 
+
 @media screen and (max-width:767px) {
     .port .pic {
         width: 100%;
+    }
+
+    .pic::before {
+        width: 95%;
+        height: 95%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .pic::before {
+        width: 93%;
+        height: 93%;
+    }
+}
+
+@media screen and (max-width:361px) {
+    .pic::before {
+        width: 91%;
+        height: 91%;
     }
 }
 
@@ -621,11 +643,21 @@ nav a:hover {
     .port .pic {
         width: 33.3%
     }
+
+    .pic::before {
+        width: 91%;
+        height: 91%;
+    }
 }
 
 @media (min-width: 1200px) {
     .port .pic {
         width: 33.3%;
+    }
+
+    .pic::before {
+        width: 92%;
+        height: 92%;
     }
 }
 
