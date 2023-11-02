@@ -35,9 +35,11 @@ nav {
     height: 60px;
     width: 100%;
     background-color: transparent;
+    position: relative;
 }
 
 nav ul {
+    /* position: relative; */
     float: right;
     padding: 18px 0;
 }
@@ -69,10 +71,80 @@ nav a:hover {
     transition-duration: .8s;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
     nav ul {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
     }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+        padding: 20px 30px;
+        background-color: rgba(0, 0, 0, 0.87);
+    }
+}
+
+.dots {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 30px;
+    cursor: pointer;
+}
+
+.dots span {
+    background-color: var(--main-clr);
+    position: absolute;
+    top: 10%;
+    width: 40px;
+    height: 5px;
+}
+
+
+.dots span:nth-child(2) {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.dots span:nth-child(3) {
+    top: 80%;
+}
+
+.dots:hover+ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dots:hover span:nth-child(1) {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.dots:hover span:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dots:hover span:nth-child(3) {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(-45deg);
 }
 
 .clr {
