@@ -87,9 +87,8 @@ nav a:hover {
         padding: 20px 30px;
         background-color: rgba(0, 0, 0, 0.87);
     }
-}
-
-.dots {
+    
+    .dots {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -145,6 +144,7 @@ nav a:hover {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(-45deg);
+}
 }
 
 .clr {
@@ -217,6 +217,25 @@ nav a:hover {
     position: relative;
 }
 
+
+.left-img {
+    border-radius: 10px;
+    position: relative;
+    height: auto;
+    top: 10%;
+}
+
+.left-img::before{
+    box-shadow: 0 0 0 8px #555555;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    top: -20px;
+    position: absolute;
+    left: -20px;
+}
+
 .main-abt img {
     max-width: 100%;
     height: 100%;
@@ -230,17 +249,16 @@ nav a:hover {
     height: 98%;
     position: absolute;
     border-radius: 5px;
-    top: 100%;
+    bottom: 0;
     visibility: hidden;
-    transition: top 0.8s ease 0s;
-    height: 100%;
+    transition: height 0.8s ease 0s;
+    height: 0%;
 }
 
 .main-abt .left-img:hover .layer {
     z-index: 2;
     height: 100%;
     visibility: visible;
-    top: 0%;
 }
 
 .main-abt .layer .icons {
@@ -270,12 +288,6 @@ nav a:hover {
     justify-content: center;
 }
 
-.left-img {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    height: auto;
-}
 
 .abt-rt {
     float: left;
@@ -353,11 +365,11 @@ nav a:hover {
     }
 
     .left-img {
-        margin-right: 20px;
+        margin: 0 30px;
     }
 
     .main-abt .layer .icons i {
-        margin-right: 15px;
+        margin-right: 10px;
     }
 }
 
@@ -370,6 +382,10 @@ nav a:hover {
     .abt-lft {
         padding-bottom: 100px;
         width: 100%;
+    }
+
+    .left-img::before{
+        content: none;
     }
 
     .abt-rt {
@@ -396,6 +412,10 @@ nav a:hover {
     .gp-about button {
         padding: 10px 15px;
         margin: 20px 0;
+    }
+
+    .left-img::before{
+        content: none;
     }
 
     .abt-lft {
