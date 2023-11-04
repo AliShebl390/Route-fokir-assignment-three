@@ -87,64 +87,64 @@ nav a:hover {
         padding: 20px 30px;
         background-color: rgba(0, 0, 0, 0.87);
     }
-    
+
     .dots {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 30px;
-    cursor: pointer;
-}
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 30px;
+        cursor: pointer;
+    }
 
-.dots span {
-    background-color: var(--main-clr);
-    position: absolute;
-    top: 10%;
-    width: 40px;
-    height: 5px;
-}
+    .dots span {
+        background-color: var(--main-clr);
+        position: absolute;
+        top: 10%;
+        width: 40px;
+        height: 5px;
+    }
 
 
-.dots span:nth-child(2) {
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+    .dots span:nth-child(2) {
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
 
-.dots span:nth-child(3) {
-    top: 80%;
-}
+    .dots span:nth-child(3) {
+        top: 80%;
+    }
 
-.dots:hover+ul {
-    opacity: 1;
-    visibility: visible;
-}
+    .dots:hover+ul {
+        opacity: 1;
+        visibility: visible;
+    }
 
-.dots:hover span:nth-child(1) {
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
+    .dots:hover span:nth-child(1) {
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
 
-.dots:hover span:nth-child(2) {
-    opacity: 0;
-    visibility: hidden;
-}
+    .dots:hover span:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
 
-.dots:hover span:nth-child(3) {
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(-45deg);
-}
+    .dots:hover span:nth-child(3) {
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(-45deg);
+    }
 }
 
 .clr {
@@ -203,11 +203,66 @@ nav a:hover {
     }
 }
 
-.home-content p {
+
+/* Home-annimation */
+
+.animated-text p {
     font-size: 26px;
     text-transform: capitalize;
     font-weight: 300;
+    /* letter-spacing: 4px; */
+    overflow: hidden;
+    color: white;
+    position: relative;
 }
+
+.animated-text p::after {
+    content: "developer";
+    display: inline-block;
+    animation: typing 6s steps(10) infinite;
+    width: 0ch;
+    color: white;
+    right: 0;
+}
+
+.animated-text p::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    animation: blinking .6s linear alternate infinite;
+}
+
+@keyframes typing {
+    25% {
+        content: "developer";
+        width: 9ch;
+    }
+
+    40% {
+        width: 0ch;
+    }
+
+    75% {
+        content: "designer";
+        width: 8ch;
+    }
+
+    90% {
+        width: 0ch;
+    }
+
+}
+
+@keyframes blinking {
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Home-annimation */
 
 /* End of main */
 /* Start abt */
@@ -225,7 +280,7 @@ nav a:hover {
     top: 10%;
 }
 
-.left-img::before{
+.left-img::before {
     box-shadow: 0 0 0 8px #555555;
     content: "";
     width: 100%;
@@ -384,7 +439,7 @@ nav a:hover {
         width: 100%;
     }
 
-    .left-img::before{
+    .left-img::before {
         content: none;
     }
 
@@ -414,7 +469,7 @@ nav a:hover {
         margin: 20px 0;
     }
 
-    .left-img::before{
+    .left-img::before {
         content: none;
     }
 
