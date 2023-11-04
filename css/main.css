@@ -2,9 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
-
 
 
 li {
@@ -337,7 +336,7 @@ nav a:hover {
 
 .abt-lft {
     float: left;
-    width: 40%;
+    width: 50%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -345,6 +344,7 @@ nav a:hover {
 
 
 .abt-rt {
+    padding-left: 20px;
     float: left;
     width: 50%;
 }
@@ -361,7 +361,6 @@ nav a:hover {
     padding-left: 13px;
     position: relative;
     text-transform: uppercase;
-
 }
 
 .abt-rt h2::before {
@@ -397,13 +396,13 @@ nav a:hover {
 
 .gp-about button {
     background-color: var(--main-clr);
-    padding: 30px 25px;
+    padding: 15px 10px;
     background: #ff305b none repeat scroll 0 0;
     border: none;
     border-radius: 4px;
     color: #ffffff;
-    margin-right: 10px;
-    padding: 15px 28px;
+    margin: 10px 10px 0 0;
+    padding: 15px 20px;
     transition: all 0.3s ease-in-out;
     font-size: 16px;
 }
@@ -454,10 +453,6 @@ nav a:hover {
     .abt-rt .gp-about li {
         width: 100%;
         margin-bottom: 10px;
-    }
-
-    .left-img {
-        box-shadow: none;
     }
 }
 
@@ -664,6 +659,10 @@ nav a:hover {
     position: relative;
 }
 
+.pic:hover.pic i {
+    opacity: 1;
+}
+
 .pic:hover.pic::before {
     opacity: .5;
 }
@@ -679,6 +678,14 @@ nav a:hover {
     transition: all .5s ease 0s;
 }
 
+.pic i {
+    transition: all 0.2s 0.3s;
+    opacity: 0;
+    color: var(--main-clr);
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+}
 
 @media screen and (max-width:767px) {
     .port .pic {
