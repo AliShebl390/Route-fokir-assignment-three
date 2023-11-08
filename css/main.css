@@ -654,37 +654,42 @@ nav a:hover {
 .port .pic {
     float: left;
     width: 33.3%;
-    padding: 15px 15px 0;
     cursor: pointer;
-    position: relative;
+    padding: 10px;
 }
 
-.pic:hover.pic i {
+.port .inner {
+    position: relative;
+    display: flex;
+}
+
+.port .layer {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    background-color: #0000005e;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+.port .pic:hover .layer {
     opacity: 1;
 }
 
-.pic:hover.pic::before {
-    opacity: .5;
-}
-
-.pic::before {
-    opacity: 0;
-    content: '';
-    width: 92%;
-    height: 92%;
-    background-color: #000;
-    position: absolute;
-    border-radius: 5px;
-    transition: all .5s ease 0s;
-}
-
-.pic i {
+.pic .inner i {
     transition: all 0.2s 0.3s;
-    opacity: 0;
     color: var(--main-clr);
     position: absolute;
-    bottom: 8%;
-    right: 8%;
+    bottom: 10px;
+    right: 10px;
+}
+
+@media (max-width: 992px) {
+    .port .pic {
+        width: 50%
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -692,53 +697,6 @@ nav a:hover {
         width: 100%;
     }
 
-    .pic::before {
-        width: 95%;
-        height: 95%;
-    }
-}
-
-
-@media screen and (max-width:500px) {
-    .pic::before {
-        width: 93%;
-        height: 93%;
-    }
-}
-
-@media screen and (max-width:361px) {
-    .pic::before {
-        width: 91%;
-        height: 91%;
-    }
-}
-
-@media (min-width: 768px) {
-    .port .pic {
-        width: 50%;
-    }
-}
-
-@media (min-width: 992px) {
-    .port .pic {
-        width: 33.3%
-    }
-
-    .pic::before {
-        width: 91%;
-        height: 91%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .port .pic {
-        width: 33.3%;
-    }
-
-    .pic::before {
-        width: 92%;
-        height: 92%;
-    }
 }
 
 /* Ent of portfolio */
@@ -1127,7 +1085,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-footer .btn{
+footer .btn {
     position: absolute;
     width: 40px;
     height: 40px;
