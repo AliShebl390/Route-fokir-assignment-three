@@ -117,11 +117,7 @@ nav a:hover {
         top: 80%;
     }
 
-    .dots:hover+ul {
-        opacity: 1;
-        visibility: visible;
-    }
-
+    
     .dots:hover span:nth-child(1) {
         top: 50%;
         -ms-transform: translateY(-50%);
@@ -130,12 +126,12 @@ nav a:hover {
         -moz-transform: rotate(45deg);
         transform: rotate(45deg);
     }
-
+    
     .dots:hover span:nth-child(2) {
         opacity: 0;
         visibility: hidden;
     }
-
+    
     .dots:hover span:nth-child(3) {
         top: 50%;
         -ms-transform: translateY(-50%);
@@ -143,6 +139,11 @@ nav a:hover {
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         transform: rotate(-45deg);
+    }
+    
+    .dots:hover+ul {
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -265,7 +266,6 @@ nav a:hover {
 
 /* End of main */
 /* Start abt */
-/* End abt */
 .main-abt {
     padding: 100px 0 125px 0;
     position: relative;
